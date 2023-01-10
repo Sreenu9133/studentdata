@@ -1,0 +1,9 @@
+
+<h1> <%= @detail.name %> </h1>
+<p> <%= @detail.place %> </p>
+<p> <%= @detail.published %> </p>
+
+<ul>
+	<li> <%= link_to "Edit", edit_detail_path(@detail) %> </li>
+	<li> <%= link_to "Destroy", detail_path(@detail), data: {turbo_method: :Delete, turbo_confirm: :"Are you sure?"} %></li>
+</ul>

@@ -1,0 +1,72 @@
+<h1> New Detail To Add </h1>
+<%= form_with model:detail do |form| %>
+  <div>
+    <%= form.label :name %> 
+    <%= form.text_field :name %><br>
+    <% detail.errors.full_messages_for(:name).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= form.label :published%>
+    <%= form.text_field :published %>
+    <%# detail.errors.full_messages_for(:gender).each do |message| %>
+    <!-- <div> <%#= message %> </div> -->
+    <% #end %>
+  </div>
+
+
+  <div>
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+    <% detail.errors.full_messages_for(:place).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+    <% detail.errors.full_messages_for(:age).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+ 
+
+  <div>
+    <%= form.label :contact%>
+    <%= form.number_field :contact %>
+    <% detail.errors.full_messages_for(:contact).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= form.label :department%>
+    <%= form.text_field :department %>
+    <% detail.errors.full_messages_for(:department).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= form.label :group%>
+    <%= form.text_field :group %>
+    <% detail.errors.full_messages_for(:group).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+ <div>
+    <%= form.label :selfdetails %>
+    <%= form.text_area :selfdetails %>
+    <% detail.errors.full_messages_for(:selfdetails).each do |message| %>
+    <div> <%= message %> </div>
+    <% end %>
+  </div>
+   <div>
+    <%= form.submit %>
+   </div>
+
+<% end %>

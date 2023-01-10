@@ -1,0 +1,9 @@
+<h1>Welcome to Student's Information</h1>
+<ul>
+	<% @details.each do |detail| %>
+	<li>
+		<%= link_to detail.name, detail %>
+	</li>
+	<% end %>
+</ul>
+<%= link_to "New Detail To Add", new_detail_path %>
